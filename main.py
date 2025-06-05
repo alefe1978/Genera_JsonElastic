@@ -1,6 +1,7 @@
 #Autor      : Luis Fernando Castellanos (Luisfc@corteconstitucional.gov.co)
-#fecha      : 2025-mayo-28
-#descripcion:   1- recorre todas las carpetas y subcarpetas de "C:\Users\luisfc\Documents\libros" donde hay archivo en formato pdf,epub, mobi  
+#Adaptado por: Jesús Alfredo Sanabria Mejia
+#fecha      : 2025-mayo-30
+#descripcion:   1- recorre todas las carpetas y subcarpetas de un folder  donde hay archivo en formato pdf,epub, mobi  
 #               2- lee cada archivo y extraer el texto teniendo presente que puede estar en español latino
 #               3-crear un archivo json para cada archivo con la estructura {"nombre":"","autor":"","texto":""}
 
@@ -14,11 +15,11 @@ def main():
     func = functions()
     
     # crear el directorio files_json en caso de no exitir
-    output_dir = "D:/GIT/bigData/Generacion_de_dataSets/GenerarJson_documentos/files_json/"
+    output_dir = "C:/Users/jesus/bigData/files_json"
     func.crear_carpeta(output_dir)
     
     # directorio donde estan los documentos/libros
-    source_dir = r"C:/Users/luisfc/Documents/libros"
+    source_dir = r"C:/Users/jesus/bigData/libros"
     
     # Counter for processed files
     totArchivos = func.contar_archivos_json(output_dir)
